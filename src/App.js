@@ -10,6 +10,10 @@ function App() {
     console.log("click-from-header", btnState)
   }
 
+  function blabla() {
+    console.log('blabla')
+  }
+
   function generateList(length) {
     const arr = [];
     for(let i=0; i<length; i++){
