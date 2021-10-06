@@ -1,17 +1,12 @@
 import Header from './components/header';
 import './App.css';
-import React from 'react';
-
-const rendomString = "Blabla";
+import React, { useState } from 'react';
 
 function App() {
+  const [searchStr, setSearchStr] = useState('Type here your search');
 
   function handleHeaderOnClickBtn(btnState) {
     console.log("click-from-header", btnState)
-  }
-
-  function blabla() {
-    console.log('blabla')
   }
 
   function generateList(length) {
@@ -22,13 +17,23 @@ function App() {
     return arr;
   }
 
+  function handeSearchStr(e) {
+    console.log(e.target.value);
+    setSearchStr(e.target.value);
+  }
+
+  function startSearch() {
+    console.log("search !!!!")
+  }
+
+  console.log(">>>>>>>>>>", searchStr);
+
   return (
     <div className="App">
-      <Header listItems={generateList(100)} onClickBtn={handleHeaderOnClickBtn} />
-      <Header listItems={[1, 2, 3]} />
-      <Header listItems={[]} />
-      <Header />
-      {/* <h2>{rendomString}</h2> */}
+      <Header listItems={generateList(100)} 
+      onClickBtn={handleHeaderOnClickBtn} 
+      handleSearchInput={handeSearchStr}
+      handleButtonSearch={startSearch}/>
     </div>
   );
 }

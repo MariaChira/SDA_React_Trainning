@@ -1,5 +1,13 @@
 import React from 'react';
+import Logo from './logo/Logo';
 import './header.css';
+
+/*
+    1. Button de login
+    2. Icon Brand
+    3. Search Field
+    4. Help link
+*/
 
 class Header extends React.Component {
     constructor() {
@@ -36,19 +44,26 @@ class Header extends React.Component {
     render() {
 
         return (
-            <React.Fragment>
-                <h1>{this.state.buttonState ? "Button True" : "Button false"}</h1>
-                <button
-                    className={this.state.buttonState ? "header-btn-style" : "header-btn-style-select"}
-                    onClick={this.handleBtnOnClick}>Change-Title</button>
-                {(this.props.listItems && this.props.listItems.length > 0) &&
-                <ul>
-                    {this.props.listItems.map(elem => (
-                        <li>{elem}</li>
-                    ))}
-                </ul>
-                }
-            </React.Fragment>
+            // <React.Fragment>
+            //     <h1>{this.state.buttonState ? "Button True" : "Button false"}</h1>
+            //     <button
+            //         className={this.state.buttonState ? "header-btn-style" : "header-btn-style-select"}
+            //         onClick={this.handleBtnOnClick}>Change-Title</button>
+            //     {(this.props.listItems && this.props.listItems.length > 0) &&
+            //     <ul>
+            //         {this.props.listItems.map(elem => (
+            //             <li>{elem}</li>
+            //         ))}
+            //     </ul>
+            //     }
+            // </React.Fragment>
+            <div className="header-container" >
+                <Logo width="4rem" color="#FF5500"/>
+                <div>
+                    <input type="text" onChange={this.props.handleSearchInput}/>
+                    <button onClick={this.props.handleButtonSearch}>Search</button>
+                </div>
+            </div>
         )
     }
 }
