@@ -13,3 +13,14 @@
     color: black;
     border-radius: 10px;
 }
+
+.header-container {
+    border: 1px solid #0000005c;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+    height: 3rem;
+    padding: 0.5 rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
