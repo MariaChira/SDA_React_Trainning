@@ -1,0 +1,15 @@
+.header-btn-style {
+    width: 5rem; 
+    height: 2rem; 
+    background: blue; 
+    color: white;
+    border-radius: 10px;
+}
+
+.header-btn-style-select {
+    background: red; 
+    width: 5rem; 
+    height: 2rem; 
+    color: black;
+    border-radius: 10px;
+}
