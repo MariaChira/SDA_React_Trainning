@@ -2,7 +2,7 @@ import Header from "./components/header"
 import "./App.css"
 import React, { useState } from "react"
 
-const rendomString = "Blabla"
+// const rendomString = "Blabla"
 
 function App() {
   const [searchStr, setSearchStr] = useState('');
